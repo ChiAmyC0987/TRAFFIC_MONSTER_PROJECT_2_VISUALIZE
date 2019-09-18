@@ -10,7 +10,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: API_KEY
 }).addTo(myMap);
 
-var url = "https://data.sfgov.org/resource/cuks-n6tp.json?$limit=10000";
+var url = "https://data.sfgov.org/resource/4zr7-yz4w.json?$limit=10000";
 
 d3.json(url, function(response) {
 
@@ -19,10 +19,10 @@ d3.json(url, function(response) {
   var heatArray = [];
 
   for (var i = 0; i < response.length; i++) {
-    var location = response[i].location;
+    var location = response[i].shape;
 
     if (location) {
-      heatArray.push([location.coordinates[1], location.coordinates[0]]);
+      heatArray.push([location.coordinates[1][1], location.coordinates[1][0]]);
     }
   }
 
