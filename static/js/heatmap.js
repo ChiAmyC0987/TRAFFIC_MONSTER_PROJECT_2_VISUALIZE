@@ -1,4 +1,3 @@
-// Realtime reports of traffic volume
 var myMap = L.map("map", {
   center: [37.7749, -122.4194],
   zoom: 13
@@ -11,7 +10,8 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: API_KEY
 }).addTo(myMap);
 
-var url = "https://data.sfgov.org/resource/4zr7-yz4w.json?$limit=10000";
+var url = //"https://data.sfgov.org/resource/cuks-n6tp.json?$limit=10000";
+          "https://data.sfgov.org/resource/4zr7-yz4w.json?$limit=10000";
 
 d3.json(url, function(response) {
 
@@ -28,8 +28,8 @@ d3.json(url, function(response) {
   }
 
   var heat = L.heatLayer(heatArray, {
-    radius: 20,
-    blur: 35
+    radius: 45,
+    blur: 45
   }).addTo(myMap);
 
 });
