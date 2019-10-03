@@ -11,4 +11,4 @@ Step 2: To clean up, we moved only information related to dashboard to current r
 https://github.com/ChiAmyC0987/TRAFFIC_MONSTER_PROJECT_2_VISUALIZE/
 
 Notes: To map some of SF data on google earth, we joined the CNNs of theme files with basemap CNN and Lat and Long. 
-These databases were too big for Github and are stored on my local machines.
+These databases were too big for Github and are stored on local machines.
